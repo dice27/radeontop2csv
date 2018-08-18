@@ -13,7 +13,7 @@ def format_line(line)
 end
 
 def convert(target)
-  File.open('result.csv','w') do |result_file|
+  File.open('result.csv', 'w') do |result_file|
     result_file.puts('Time,Graphics pipe,Event Engine,Vertex Grouper + Tesselator,Texture Addresser,Shader Export,Sequencer Instruction Cache,Shader Interpolator,Scan Converter,Primitive Assembly,Depth Block,Color Block')
     File.open(target) do |file|
       file.each_line do |line|
