@@ -1,7 +1,7 @@
 #! /usr/bin/env ruby
 
 def valid_argument?
-  ARGV.size() == 1 and File.exist?(ARGV[0])
+  ARGV.size() == 1 && File.exist?(ARGV[0])
 end
 
 def get_time(src)
