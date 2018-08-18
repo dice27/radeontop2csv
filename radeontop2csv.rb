@@ -1,6 +1,6 @@
 #! /usr/bin/env ruby
 
-def is_valid_argument?
+def valid_argument?
   ARGV.size() == 1 and File.exist?(ARGV[0])
 end
 
@@ -24,7 +24,7 @@ def convert (target)
 end
 
 if __FILE__ == $0
-  if is_valid_argument? then
+  if valid_argument? then
     convert(ARGV[0])
   end
 end
