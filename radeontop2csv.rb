@@ -5,11 +5,11 @@ def valid_argument?
 end
 
 def get_time(src)
-  return Time.at(src[/.*?:/].gsub(/:/, '').to_i).to_s
+  Time.at(src[/.*?:/].gsub(/:/, '').to_i).to_s
 end
 
 def format_line(line)
-  return line.gsub(/(\s|　|[a-zA-Z%])+/, '').gsub(/.*?:/, get_time(line) + ',')
+  line.gsub(/(\s|　|[a-zA-Z%])+/, '').gsub(/.*?:/, get_time(line) + ',')
 end
 
 def convert(target)
