@@ -24,7 +24,5 @@ def convert(target)
 end
 
 if __FILE__ == $0
-  if valid_argument? then
-    convert(ARGV[0])
-  end
+  convert(ARGV[0]) if valid_argument?
 end
