@@ -5,7 +5,7 @@ def valid_argument?
 end
 
 def get_time(src)
-  Time.at(src[/.*?:/].gsub(/:/, '').to_i).to_s
+  Time.at(src[/.*?:/].delete(/:/, '').to_i).to_s
 end
 
 def format_line(line)
