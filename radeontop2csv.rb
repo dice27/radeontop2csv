@@ -23,6 +23,6 @@ def convert(target)
   end
 end
 
-if __FILE__ == $0
+if $PROGRAM_NAME == __FILE__
   convert(ARGV[0]) if valid_argument?
 end
